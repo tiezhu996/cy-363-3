@@ -162,3 +162,150 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
+.topbar-actions {
+  display: flex;
+  align-items: center;
+}
+
+.main-tabs {
+  margin-bottom: 24px;
+}
+
+.main-tabs .ant-tabs-nav {
+  margin-bottom: 0;
+}
+
+.main-tabs .ant-tabs-tab {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.section-header .ant-typography {
+  margin-bottom: 0 !important;
+}
+
+.difficulty-stars {
+  display: inline-flex;
+  gap: 2px;
+}
+
+.difficulty-stars .anticon {
+  font-size: 14px;
+}
+
+.theme-board-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  background: color-mix(in srgb, #f9f0f2 86%, white 14%);
+  border: 1px solid color-mix(in srgb, #26181c 13%, transparent);
+  border-radius: 8px;
+}
+
+.theme-board-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.theme-card {
+  border: 1px solid color-mix(in srgb, #26181c 13%, transparent);
+  background: color-mix(in srgb, #f9f0f2 70%, white 30%);
+  border-radius: 8px;
+  padding: 16px;
+  transition: all 0.2s ease;
+}
+
+.theme-card:hover {
+  box-shadow: 0 8px 24px color-mix(in srgb, #26181c 12%, transparent);
+  transform: translateY(-2px);
+}
+
+.theme-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.theme-name {
+  font-size: 16px;
+  font-weight: 700;
+  color: #26181c;
+}
+
+.theme-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.theme-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.info-label {
+  color: color-mix(in srgb, #26181c 60%, transparent);
+  min-width: 50px;
+}
+
+.info-value {
+  font-weight: 600;
+  color: #26181c;
+}
+
+.theme-management .ant-table {
+  background: transparent;
+}
+
+.theme-management .ant-table-thead > tr > th {
+  background: color-mix(in srgb, #ead6dc 60%, transparent);
+  font-weight: 600;
+}
+
+.theme-management .ant-table-tbody > tr:hover > td {
+  background: color-mix(in srgb, #ead6dc 30%, transparent);
+}
+
+.theme-management .ant-tag {
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.form-row {
+  display: flex;
+  gap: 12px;
+}
+
+@media (max-width: 640px) {
+  .theme-board-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .form-row .ant-form-item {
+    margin-right: 0 !important;
+  }
+
+  .topbar-actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}

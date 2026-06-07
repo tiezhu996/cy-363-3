@@ -2,6 +2,7 @@ import cors from "cors";
 import express from "express";
 import helmet from "helmet";
 import { overviewRouter } from "./modules/overview/overview.routes";
+import { themeRouter } from "./modules/theme/theme.routes";
 
 export const app = express();
 
@@ -12,4 +13,6 @@ app.use(express.json());
 app.get("/health", (_request, response) => response.json({ status: "ok" }));
 app.get("/api/health", (_request, response) => response.json({ status: "ok" }));
 app.use("/", overviewRouter);
+app.use("/", themeRouter);
 app.use("/api", overviewRouter);
+app.use("/api", themeRouter);
